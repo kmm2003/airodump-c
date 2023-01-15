@@ -1,12 +1,11 @@
 #include "airodump.h"
 
-Airodump::Airodump(char* dev)
+Airodump::Airodump(char* iface)
 {
-  param.dev_ = dev;
 	char errbuf[PCAP_ERRBUF_SIZE];
-	pcap = pcap_open_live(param.dev_, BUFSIZ, 1, 1000, errbuf);
+	pcap = pcap_open_live(iface, BUFSIZ, 1, 1000, errbuf);
 	if (pcap == NULL) {
-		fprintf(stderr, "pcap_open_live(%s) return null - %s\n", param.dev_, errbuf);
+		fprintf(stderr, "pcap_open_live(%s) return null - %s\n", iface, errbuf);
     exit(1);
 	}
 }
