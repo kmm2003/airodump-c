@@ -25,7 +25,7 @@ struct RADIOTAP_HEADER
 	u_int8_t		dataRate;
 	u_int16_t		channelFrequency;
 	u_int16_t		channelFlags;  
-	u_int8_t		antennaSignal; //PWR
+	u_int8_t		antennaSignal;
 	u_int8_t		antenna;
 	u_int16_t		rxFlags; 
 	u_int8_t		antennaSignalT;
@@ -34,7 +34,7 @@ struct RADIOTAP_HEADER
 
 struct BEACON_FRAME
 {
-	u_int16_t frameControl; //0x0008
+	u_int16_t frameControl;
 	u_int16_t duration;
 	u_int8_t destinationAddr[6];
 	u_int8_t sourceAddr[6];
