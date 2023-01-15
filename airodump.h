@@ -15,10 +15,6 @@ enum status
   NEXT
 };
 
-struct Param {
-	char* dev_;
-};
-
 struct RADIOTAP_HEADER 
 {
   u_int8_t    version;     
@@ -71,7 +67,6 @@ class Airodump
 {
 private:
 	pcap_t* pcap;	
-  Param param;
   const u_char* packet;
   std::map<std::string,std::vector<std::string>> apInfo; 
 
