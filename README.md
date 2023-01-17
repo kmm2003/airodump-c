@@ -6,10 +6,6 @@
 
 ## usage
 ```
-make
-```
-
-```
 syntax: ./airodump <interface>
 example: ./airodump wlan0
 ```
